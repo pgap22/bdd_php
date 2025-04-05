@@ -1,0 +1,11 @@
+<?php  
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['usuario'])) {
+    $rol = $_SESSION['usuario']['rol'];
+    header("Location: views/$rol/index.php");
+}
+
+?>
