@@ -37,7 +37,7 @@ class LoginController
                 "rol" => $user['rol']
             ];
 
-            header('Location: views/admin/index.php');
+            header('Location: /admin/index.php');
         } else {
             return [
                 "success" => false,

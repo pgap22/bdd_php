@@ -1,10 +1,13 @@
 <?php
-require('config/database.php');
+require('models/Conexion.php');
 require('controllers/LoginController.php');
 require('middleware/no_auth.php');
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $db = Conexion::getInstance();
+    $db = $db->getConnection();
+
     $loginController = new LoginController($db);
     $message == $loginController->login($_POST['email'], $_POST['password']);
 }
@@ -17,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Sistema De Asistencia CECE</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/app.min.css">
 </head>
 
 <body class="bg-gray-100 h-screen flex items-center justify-center">

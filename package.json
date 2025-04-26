@@ -1,0 +1,17 @@
+{
+  "name": "bdd_php",
+  "version": "1.0.0",
+  "description": "Este proyecto es una implementación de una aplicación web utilizando **SQL Server** como base de datos y **PHP 8.3** como backend para manejar las solicitudes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "@tailwindcss -i ./public/app.css -o ./public/app.min.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  }
+}

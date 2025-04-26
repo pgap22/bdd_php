@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 if (isset($_SESSION['usuario'])) {
     $rol = $_SESSION['usuario']['rol'];
-    header("Location: views/$rol/index.php");
+    header("Location: $rol/index.php");
 }
 
 ?>
